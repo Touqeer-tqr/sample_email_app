@@ -5,16 +5,16 @@ require File.expand_path('../application', __FILE__)
 Rails.application.initialize!
 
 Rails.application.configure do
-	config.action_mailer.delivery_method = :smtp
-
-	config.action_mailer.smtp_settings = {
-	   address:              'smtp.gmail.com',
-	   port:                 587,
-	   domain:               'example.com',
-	   user_name:            'touqeer.ahmad@aldaimsolutions.com',
-	   password:             'tqr@aldaim*',
-	   authentication:       'plain',
-	   enable_starttls_auto: true  
-	}
+   config.action_mailer.raise_delivery_errors = true
 end
+
+ActionMailer::Base.smtp_settings = {
+  :address        => 'smtp.gmail.com',
+  :domain         => 'mail.google.com',
+  :port           => 587,
+  :user_name      => 'info@example.com',
+  :password       => 'password',
+  :authentication => :plain,
+  :enable_starttls_auto => true
+}
 ActionMailer::Base.default :content_type => "text/html"

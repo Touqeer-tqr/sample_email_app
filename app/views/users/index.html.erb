@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<%= form_tag users_send_email_path, method: 'get' do %>
+  <div class="field">
+    <%= label_tag :email %>
+    <%= text_field_tag :email, nil, style: "width: 100%; max-width: 300px;" %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "send email" %>
+  </div>
+<% end %>

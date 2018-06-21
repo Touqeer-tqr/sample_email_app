@@ -1,9 +1,7 @@
 class Usermailer < ApplicationMailer
-	default from: 'info@techlexity.com'
-   
-	def welcome_email(user)
-		@url  = 'http://www.gmail.com'
-		mail(to: "touqeer.ahmad@aldaimsolutions.com", subject: 'Welcome to My Awesome Site')
+
+	def welcome_email(email_address)
+		mail(to: email_address, subject: 'Test Email')
 	end
    
 end
