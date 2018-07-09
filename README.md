@@ -1,7 +1,7 @@
 # README
 [TQR](https://touqeer-ahmad.herokuapp.com/)
 
-#rails actionmailer sample app
+# rails actionmailer sample/example app
 
 - simple demo actionmailer rails app to send emails
 - you can also send email from local
